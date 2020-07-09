@@ -6,13 +6,11 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-const token string = "NzMwNzc3MzE1MzUyNjQxNTY2.XwcbmQ.ICSw0uIP67EQ5-uhlVVuHqL5VZk"
-
 var BotID string
 
 func main() {
 	fmt.Println("Test")
-	dg, err := discordgo.New("Bot " + token)
+	dg, err := discordgo.New("Bot " + process.env.token)
 
 	if err != nil {
 		fmt.Println(err)
